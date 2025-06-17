@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --header-height: 5rem;
@@ -39,6 +39,70 @@ body {
     font-size: var(--normal-font-size);
     font-family: var(--font-body);
     overflow-x: hidden;
+}
+
+/* Buttons */
+.btn {
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    border: 1px solid var(--first-color);
+    border-radius: 50px;
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--first-color);
+}
+
+.btn-outline {
+    width: 280px;
+    background-color: transparent;
+    color: var(--first-color);
+    padding: 5px 10px 5px 0;
+    transition: all 0.4s ease;  
+    position: relative;
+}
+
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12%;
+    height: 100%;
+    background-color: var(--first-color);
+    border: 1px solid var(--first-color);
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-outline i {
+    margin-right: 1.5rem;
+    font-size: var(--h3-font-size);
+    color: var(--white-color);
+    z-index: 10;
+}
+
+.btn-outline:hover::before {
+    width: 100%;
+    z-index:-1;
+}
+
+.btn-outline:hover {
+    color: var(--white-color);
+    z-index: 10
 }
 
 header {
@@ -113,6 +177,56 @@ header {
     border: 2px solid var(--first-color);
 }
 
+
+/* Start Home Section */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    border-radius: 0 0 300px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home .home-img img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.home .home-content {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.home .home-content h1 {
+    font-family: var(--font-cursive);
+    font-size: 4rem;
+    line-height: 3.5rem;
+    letter-spacing: 4px;
+    color: var(--first-color);
+    margin-bottom: 1.5rem;
+}
+
+.home .home-content p {
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--black-color);
+    margin-bottom: 1.5rem;
+}
+
+/* End Home Section */
+
 @media (max-width: 920px) {
     .nav-menu {
         position: absolute;
@@ -145,3 +259,4 @@ header {
     }
     
 }
+
