@@ -1,0 +1,96 @@
+.promo-slider {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.1);
+}
+
+.promo-slide {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-content {
+  max-width: 50%;
+}
+
+.promo-content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.promo-content h3 {
+  font-size: 1.8rem;
+  color: #e84ca6;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #003f6f;
+}
+
+.price span {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border: 2px solid #e84ca6;
+  padding: 10px 20px;
+  color: #0baf57;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background-color: #f8f0f4;
+}
+
+.promo-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* стрелки */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e84ca6;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.slider-arrow.left {
+  left: 10px;
+}
+.slider-arrow.right {
+  right: 10px;
+}
