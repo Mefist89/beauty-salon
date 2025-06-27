@@ -270,6 +270,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap:0.5rem
 }
 .item{
     display: flex;
