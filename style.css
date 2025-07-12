@@ -304,7 +304,7 @@ body{
 }
 .slider-arrow.left {
     left: 50%;
-    transform: translateX(-35px);
+    transform: translateX(-50px);
 }
 .slider-arrow.right {
     left: 50%;
