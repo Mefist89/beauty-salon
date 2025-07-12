@@ -20,11 +20,10 @@ document.querySelector('.slider-arrow.right').addEventListener('click', () => {
 // Показать первый слайд при загрузке страницы
 showSlide(currentSlide);
 
-    function sendWhatsApp() {
-            const phone = "+37378329685"; // Укажите ваш номер телефона с кодом страны
-            const message = "Хочу узнать подробное описание о вашем услуге"; // Ваше сообщение
-            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-            
-        }
+function sendWhatsApp() {
+    const phone = "+37378329685"; // Укажите ваш номер телефона с кодом страны
+    const message = "Хочу узнать подробное описание о вашем услуге"; // Ваше сообщение
+    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
 

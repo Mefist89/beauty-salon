@@ -33,9 +33,3 @@ fetch("peels.json")
     });
 
 
-function sendWhatsApp() {
-    const phone = "+37378329685"; // Укажите ваш номер телефона с кодом страны
-    const message = "Хочу записаться на акцию: Александритовая лазерная эпиляция";
-    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-}
