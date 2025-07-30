@@ -243,24 +243,40 @@ body{
 }
 
 .whatsapp-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
     background-color: #fff;
     border: 2px solid var(--first-color);
-    padding: 10px 20px;
+    padding: 12px 24px;
     color: #0baf57;
-    border-radius: 30px;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    max-width: 220px;
+    margin: 20px 0 0 0;
+    box-shadow: 0 4px 12px rgba(11, 175, 87, 0.1);
+    cursor: pointer;
 }
+
 .whatsapp-btn:hover {
-    background-color: #f8e9f0;
+    background-color: #e8f5ec;
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(11, 175, 87, 0.2);
 }
+
 .whatsapp-btn img {
     width: 24px;
     height: 24px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover img {
+    transform: rotate(10deg);
 }
 
 /* Изображение */
@@ -329,6 +345,7 @@ body{
 .section-title{
     margin: 0 auto;
     text-align: center;
+    width: 100%;
 }
 .section-title h1{
     font-family: var(--font-cursive);
@@ -744,6 +761,60 @@ body{
     .footer-list{
         grid-template-columns: repeat(2, 1fr);
     }
+    .promo-slider {
+        flex-direction: column;  
+        align-items: center;  
+        padding: 20px;
+        max-height: none;
+        min-height: auto;
+    }
+
+    .promo-slide.active {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo-content {
+        text-align: center; 
+        max-width: 100%;
+    }
+
+    .promo-image {
+        display: none; 
+    }
+
+    .promo-btn {
+        margin-top: 25px;  
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;  
+    }
+
+    .slider-arrow {
+        position: static;  
+        transform: none; 
+    }
+
+    .slider-arrow.left, .slider-arrow.right {
+        left: auto;
+        transform: none;
+    }
+    
+    .whatsapp-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .slider-arrow.left {
+    left: 50%; 
+    transform: translate(0px, -50%);
+    }
+
+    .slider-arrow.right {
+    right: auto;
+    left: 50%;
+    transform: translate(0px, -50%);
+    }
 }
 @media (max-width: 560px) {
     .services-content-description{
@@ -759,6 +830,40 @@ body{
     }
     .footer-list{
         grid-template-columns: unset;
+    }
+    .promo-slider {
+        padding: 20px 15px; 
+    }
+    
+    .promo-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .promo-content h3 {
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .promo-content .price {
+        font-size: 1.2rem;
+    }
+    .promo-content .price span {
+        font-size: 1.5rem;
+    }
+
+    .whatsapp-btn {
+        padding: 8px 16px;
+        font-size: var(--small-font-size);
+    }
+    .slider-arrow.left {
+    left: 50%; 
+    transform: translate(0px, -50%);
+    }
+
+    .slider-arrow.right {
+    right: auto;
+    left: 50%;
+    transform: translate(0px, -50%);
     }
 }
 

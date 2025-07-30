@@ -17,13 +17,12 @@ document.querySelector('.slider-arrow.right').addEventListener('click', () => {
     showSlide(currentSlide);
 });
 
-// Показать первый слайд при загрузке страницы
+
 showSlide(currentSlide);
 
-function sendWhatsApp() {
-    const phone = "+79143814224"; // Укажите ваш номер телефона с кодом страны
-    const message = "Хочу узнать подробное описание о вашем услуге"; // Ваше сообщение
+function sendWhatsApp(promoText) {
+    const phone = "+79143814224"; 
+    const message = `${promoText}: Хочу узнать подробное описание о вашем услуге`; 
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
-
