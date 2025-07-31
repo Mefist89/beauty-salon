@@ -1,4 +1,4 @@
-fetch("peels.json")
+fetch("preparaty.json")
     .then(res => res.json())
     .then(data => {
         const container = document.getElementById("cards-container");
@@ -30,5 +30,4 @@ fetch("peels.json")
         console.error("Ошибка загрузки:", error);
         document.getElementById("cards-container").innerHTML = "<p>Ошибка загрузки данных</p>";
     });
-
 
