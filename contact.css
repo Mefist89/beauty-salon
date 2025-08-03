@@ -1,0 +1,103 @@
+/* Contact Page Specific Styles */
+
+.contact-section {
+    padding: 10rem 1rem;
+    background-color: var(--main-color);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.15);
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: var(--normal-font-size);
+}
+
+.contact-info i {
+    color: var(--first-color);
+    font-size: var(--h3-font-size);
+}
+
+.map-container {
+    margin-top: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--second-color);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: var(--normal-font-size);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--first-color);
+    box-shadow: 0 0 5px rgba(117, 73, 43, 0.3);
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: var(--main-color);
+    padding-bottom: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 920px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        order: -1; /* This will move the form to the top */
+    }
+    .map-container iframe {
+        height: 200px; /* Reducing map height */
+    }
+    .contact-info h3,
+    .contact-form h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .contact-section {
+        padding: 8rem 1rem;
+    }
+    .contact-container {
+        padding: 1.5rem;
+    }
+}

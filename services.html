@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Специальные предложения и акции в нашем салоне красоты. Получите скидку на первую услугу!">
-    <title>Акции - Beauty Salon</title>
+    <title>Услуги - Beauty Salon</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="services.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,10 +17,6 @@
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-        <!-- CSS Files -->
-    <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="promo.css">
 </head>
 <body>
     <header class="header" id="header">
@@ -29,10 +28,10 @@
                 <ul class="nav-list">
                     <li><a href="./index.html" class="nav-link">Главная</a></li>
                     <li><a href="./about.html" class="nav-link">О нас</a></li>
-                    <li><a href="./services.html" class="nav-link">Услуги</a></li>
+                    <li><a href="./services.html" class="nav-link active">Услуги</a></li>
                     <li><a href="./preparaty.html" class="nav-link">Препараты</a></li>
                     <li><a href="./peels.html" class="nav-link">Пилинги</a></li>
-                    <li><a href="#" class="nav-link active">Акции</a></li>
+                    <li><a href="./promo.html" class="nav-link">Акции</a></li>
                     <li><a href="./price.html" class="nav-link">Цены</a></li>
                     <li><a href="./contact.html" class="nav-link">Контакты</a></li>
                 </ul>
@@ -44,18 +43,18 @@
     </header>
 
     <main>
-        <section class="package" id="package">
+        <section class="services-page">
             <div class="section-title">
-                <h1>Акции</h1>
-                <span>Получите скидку 50% на первую услугу</span>
+                <h1>Наши услуги</h1>
+                <span>Все, что нужно для вашей красоты</span>
             </div>
-            <div class="package-cards" id="promotions-container">
-                <!-- Акции будут загружены здесь с помощью promo.js -->
+            <div id="services-container" class="services-container">
+                <!-- Услуги будут загружены здесь с помощью services.js -->
             </div>
         </section>
     </main>
 
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <div class="footer-list">
             <div class="footer-data">
                 <h1><a href="./index.html"><img src="img/logo.svg" alt="Beauty Salon Logo"></a></h1>
@@ -85,11 +84,8 @@
         </div>
     </footer>
 
-        <!-- Javascript Files -->
-    <a href="#" class="scroll-up" id="scroll-up">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- Javascript Files -->
     <script src="main.js"></script>
-    <script src="promo.js"></script>
+    <script src="services.js"></script>
 </body>
 </html>

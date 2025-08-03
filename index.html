@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Салон красоты в Cahul. Предлагаем широкий спектр услуг: косметология, парикмахерские услуги, ногтевой сервис и многое другое. Запишитесь онлайн!">
     <title>Beauty Salon</title>
-    <!-- CSS File -->
+        <!-- CSS Files -->
+    <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome CDN -->
+        <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- SimpleLightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css" integrity="sha512-go9fCMo3+inb2uLd/sGlryv+K2wzL1C8Ab3d2Nqfoi5S71F9O293Wl23RYQ2PKJ2/HbCeaP25Mh5M5H3D/p/wA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header" id="header">
@@ -18,13 +23,14 @@
             </div>
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="#" class="nav-link active">Главная</a></li>
-                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="./index.html" class="nav-link active">Главная</a></li>
+                    <li><a href="./about.html" class="nav-link">О нас</a></li>
+                    <li><a href="./services.html" class="nav-link">Услуги</a></li>
                     <li><a href="./preparaty.html" class="nav-link">Препараты</a></li>
                     <li><a href="./peels.html" class="nav-link">Пилинги</a></li>
                     <li><a href="./promo.html" class="nav-link">Акции</a></li>
                     <li><a href="./price.html" class="nav-link">Цены</a></li>
-                    <li><a href="#contact" class="nav-link">contact</a></li>
+                    <li><a href="./contact.html" class="nav-link">contact</a></li>
                 </ul>
             </nav>
             <div class="nav-toggle" id="nav-toggle">
@@ -100,7 +106,7 @@
             <div class="about-detail">
                 <div class="about-detail-content">
                     <div class="about-img">
-                        <img src="img/about-img.jpg">
+                        <img src="img/about-img.jpg" loading="lazy">
                     </div>
                     <div class="about-description">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Velit possimus a sint</p>
@@ -343,126 +349,48 @@
         </div>
     </section>
     <!-- End Package Section -->
-    <!-- Start Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="gallery-content">
-            <div class="section-title">
-                <h1>gallery</h1>
-                <span>the princesses of our instagram</span>
-            </div>
-            <div class="gallery-list-img">
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo1.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo2.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo3.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo4.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo5.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo6.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo7.png">
-                </div>
-                <div class="gallery-img">
-                    <img src="img/img-insta/photo8.png">
-                </div>
-            </div>
-            <button class="btn">see more</button>
+        <!-- Start Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="section-title">
+            <h1>Наши работы</h1>
+            <span>Взгляните на наше мастерство</span>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item"><a href="img/img-insta/photo1.png"><img src="img/img-insta/photo1.png" alt="Пример работы 1"></a></div>
+            <div class="portfolio-item"><a href="img/img-insta/photo2.png"><img src="img/img-insta/photo2.png" alt="Пример работы 2"></a></div>
+            <div class="portfolio-item"><a href="img/img-insta/photo3.png"><img src="img/img-insta/photo3.png" alt="Пример работы 3"></a></div>
+            <div class="portfolio-item"><a href="img/img-insta/photo4.png"><img src="img/img-insta/photo4.png" alt="Пример работы 4"></a></div>
+            <div class="portfolio-item"><a href="img/img-insta/photo5.png"><img src="img/img-insta/photo5.png" alt="Пример работы 5"></a></div>
+            <div class="portfolio-item"><a href="img/img-insta/photo6.png"><img src="img/img-insta/photo6.png" alt="Пример работы 6"></a></div>
         </div>
     </section>
-    <!-- End Gallery Section -->
+    <!-- End Portfolio Section -->
+
     <!-- Start Testimonials Section -->
-    <section class="testimonials">
-        <div class="testimonials-content">
-            <div class="section-title">
-                <h1>testimonials</h1>
-                <span>see what our customer say</span>
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h1>Отзывы наших клиентов</h1>
+            <span>Что говорят о нас</span>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <img src="img/testimonials/p1.png" alt="Фото клиента">
+                <p class="testimonial-text">"Невероятная атмосфера и высочайший профессионализм! Ушла с прекрасным настроением и идеальным маникюром. Обязательно вернусь!"</p>
+                <h4 class="testimonial-author">- Алина К.</h4>
             </div>
-            <div class="testimonials-card">
-                <div class="testimonials-item">
-                    <div class="testimonials-img">
-                        <img src="img/testimonials/testimonials1.png">
-                    </div>
-                    <div class="testimonials-box">
-                        <div class="testimonials-name">
-                            <h1>Celaena</h1>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="testimonials-description">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor earum culpa eius, libero reprehenderit maiores.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials-item">
-                    <div class="testimonials-img">
-                        <img src="img/testimonials/testimonials2.png">
-                    </div>
-                    <div class="testimonials-box">
-                        <div class="testimonials-name">
-                            <h1>Aelin</h1>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="testimonials-description">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor earum culpa eius, libero reprehenderit maiores.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials-item">
-                    <div class="testimonials-img">
-                        <img src="img/testimonials/testimonials1.png">
-                    </div>
-                    <div class="testimonials-box">
-                        <div class="testimonials-name">
-                            <h1>Luciana</h1>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="testimonials-description">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor earum culpa eius, libero reprehenderit maiores.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials-item">
-                    <div class="testimonials-img">
-                        <img src="img/testimonials/testimonials2.png">
-                    </div>
-                    <div class="testimonials-box">
-                        <div class="testimonials-name">
-                            <h1>Patricia</h1>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="testimonials-description">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor earum culpa eius, libero reprehenderit maiores.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonial-card">
+                <img src="img/testimonials/a1.png" alt="Фото клиента">
+                <p class="testimonial-text">"Лучшая стрижка в моей жизни! Мастер понял меня с полуслова и сделал именно то, что я хотела. Спасибо огромное!"</p>
+                <h4 class="testimonial-author">- Светлана В.</h4>
+            </div>
+            <div class="testimonial-card">
+                <img src="img/testimonials/p1.png" alt="Фото клиента">
+                <p class="testimonial-text">"Чистка лица прошла очень комфортно, а результат превзошел все ожидания. Кожа гладкая и сияющая. Рекомендую всем!"</p>
+                <h4 class="testimonial-author">- Мария П.</h4>
             </div>
         </div>
     </section>
+    <!-- End Testimonials Section -->
 
     <!-- End Testimonials Section -->
     <!-- Start Footer Section -->
@@ -496,8 +424,17 @@
         </div>
     </footer>
     <!-- End Footer Section -->
-    <!-- Javascript File -->
+            <!-- Javascript File -->
+    <a href="#" class="scroll-up" id="scroll-up">
+        <i class="fas fa-arrow-up"></i>
+    </a>
     <script src="main.js"></script>
     <script src="slider.js"></script>
+
+    <!-- SimpleLightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js" integrity="sha512-Vtot07oogPy4QFTW_38Kp+1LD4e1z7B4e6C79iVn32Y/p6kv2fVdL7we29O_rZ3D4k46o2/NA5ESr+BTR1bXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new SimpleLightbox('.portfolio-item a');
+    </script>
 </body>
 </html>

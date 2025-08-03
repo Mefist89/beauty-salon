@@ -11,7 +11,7 @@ fetch("peels.json")
                 <div class="card">
                     <div class="card-group">
                         <div class="item-image">
-                            <img src="${item.image}" alt="${item.alt || ''}">
+                            <img src="${item.image}" alt="${item.alt || ''}" loading="lazy">
                         </div>
                         <div class="card-items">
                             <h2>${item.title}</h2>
@@ -30,5 +30,3 @@ fetch("peels.json")
         console.error("Ошибка загрузки:", error);
         document.getElementById("cards-container").innerHTML = "<p>Ошибка загрузки данных</p>";
     });
-
-
