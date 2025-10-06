@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('.content-section');
+    
+    // Проверяем, существуют ли элементы перед тем, как работать с ними
+    if (sections.length === 0) {
+        console.warn('Элементы с классом .content-section не найдены');
+        return;
+    }
 
     const revealSection = (entries, observer) => {
         const [entry] = entries;
-        if (!entry.isIntersecting) return;
+        if (!entry || !entry.isIntersecting) return;
 
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);

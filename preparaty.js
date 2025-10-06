@@ -11,6 +11,11 @@ const fetchPreparaty = async () => {
         return data;
     } catch (error) {
         console.error("Ошибка загрузки данных:", error);
+        // Показываем сообщение об ошибке пользователю
+        const container = document.getElementById("cards-container");
+        if (container) {
+            container.innerHTML = "<p>Не удалось загрузить данные. Пожалуйста, обновите страницу или попробуйте позже.</p>";
+        }
         return null;
     }
 };
@@ -22,19 +27,37 @@ const renderPreparaty = (preparaty) => {
         return;
     }
 
+    // Функция для экранирования HTML-символов
+    const escapeHtml = (text) => {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    };
+
     container.innerHTML = preparaty.map(item => {
-        const message = encodeURIComponent(`Хочу узнать подробнее про: ${item.title}`);
+        // Экранируем данные перед вставкой
+        const escapedTitle = escapeHtml(item.title);
+        const escapedDescription = escapeHtml(item.description);
+        const escapedAlt = escapeHtml(item.alt || '');
+        
+        // Проверяем и валидируем URL изображения
+        let imageUrl = item.image;
+        if (typeof item.image !== 'string' || !item.image.startsWith('img/')) {
+            imageUrl = 'img/default-image.png'; // использовать изображение по умолчанию для безопасности
+        }
+        
+        const message = encodeURIComponent(`Хочу узнать подробнее про: ${escapedTitle}`);
         const whatsappLink = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${message}`;
         
         return `
             <div class="card">
                 <div class="card-group">
                     <div class="item-image">
-                            <img src="${item.image}" alt="${item.alt || ''}" loading="lazy">
+                            <img src="${escapeHtml(imageUrl)}" alt="${escapedAlt}" loading="lazy">
                         </div>
                     <div class="card-items">
-                        <h2>${item.title}</h2>
-                        <p>${item.description}</p>
+                        <h2>${escapedTitle}</h2>
+                        <p>${escapedDescription}</p>
                         <a href="${whatsappLink}" class="whatsapp-btn" target="_blank">
                             <img src="${WHATSAPP_ICON_URL}" alt="WhatsApp">
                             Узнать больше

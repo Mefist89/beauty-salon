@@ -29,22 +29,42 @@ function colorLink(){
 linkColor.forEach(L => L.addEventListener('click', colorLink))
 
 // Change Header Background When Scroll Down
+let scrollHeaderTimeout;
 
 function scrollHeader(){
     const scrollHeader = document.getElementById('header')
-    if(this.scrollY >= 200){
+    if(window.scrollY >= 200){
         scrollHeader.classList.add('scroll-header')
     }
     else{
         scrollHeader.classList.remove('scroll-header')
     }
 }
-window.addEventListener('scroll', scrollHeader);
+
+// Оптимизируем обработчик прокрутки с использованием debounce
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+const optimizedScrollHeader = debounce(scrollHeader, 10); // Ограничиваем вызов функции до 1 раза в 10мс
+window.addEventListener('scroll', optimizedScrollHeader);
 
 // Scroll Up
+let scrollUpTimeout;
+
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
-    if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    if(window.scrollY >= 20) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
-window.addEventListener('scroll', scrollUp)
+
+const optimizedScrollUp = debounce(scrollUp, 10); // Ограничиваем вызов функции до 1 раза в 10мс
+window.addEventListener('scroll', optimizedScrollUp)
 
