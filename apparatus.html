@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Современные и безопасные пилинги для вашей кожи. Ознакомьтесь с нашими процедурами и запишитесь на консультацию.">
-    <title>Пилинги - Beauty Salon</title>
+    <title>Аппараты - Beauty Salon</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="apparatus.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,10 +17,6 @@
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-        <!-- CSS Files -->
-    <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="peels.css">
 </head>
 <body>
     <header class="header" id="header">
@@ -30,9 +29,9 @@
                     <li><a href="./index.html" class="nav-link">Главная</a></li>
                     <li><a href="./services.html" class="nav-link">Услуги</a></li>
                     <li><a href="./preparaty.html" class="nav-link">Препараты</a></li>
-                    <li><a href="#" class="nav-link active">Пилинги</a></li>
-                    <li><a href="./apparatus.html" class="nav-link">Аппараты</a></li>
-                    </ul>
+                    <li><a href="./peels.html" class="nav-link">Пилинги</a></li>
+                    <li><a href="./apparatus.html" class="nav-link active">Аппараты</a></li>
+                </ul>
             </nav>
             <div class="nav-toggle" id="nav-toggle">
                 <i class="fas fa-bars"></i>
@@ -41,17 +40,18 @@
     </header>
 
     <main>
-        <section class="package" id="package">
+        <section class="apparatus-page">
             <div class="section-title">
-                <h1>Современные и безопасные пилинги для вашей кожи</h1>
+                <h1>Наши аппараты</h1>
+                <span>Современное оборудование для вашей красоты</span>
             </div>
-            <div class="package-cards" id="cards-container">
-                <!-- Карточки будут загружены здесь с помощью peels.js -->
+            <div id="apparatus-container" class="apparatus-container">
+                <!-- Аппараты будут загружены здесь с помощью apparatus.js -->
             </div>
         </section>
     </main>
 
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <div class="footer-list">
             <div class="footer-data">
                 <h1><a href="./index.html"><img src="img/logo.svg" alt="Beauty Salon Logo"></a></h1>
@@ -62,30 +62,26 @@
                 </div>
             </div>
             <div class="footer-data">
-                <h2>Адрес</h2>
-                <p>strada Veche - St 15<br> Cahul - Moldova</p>
+               <h2>Адрес</h2>
+               <p>strada Veche - St 15<br> Cahul - Moldova</p>
             </div>
             <div class="footer-data">
                 <h2>Мы открыты</h2>
-                <p>Понедельник - Пятница <br> С 09:00 до 18:00</p>
+                <p>Понедельник - Пятница <br> С 09:0 до 18:00</p>
             </div>
             <div class="footer-data">
                 <h2>Контакты</h2>
-                <p>(20) 1111-222-333</p>
-                <p>(20) 4444-555-666</p>
+                <p>(20) 11-222-33</p>
+                <p>(20) 4444-55-666</p>
             </div>
-        </div>
         <div class="copy">
             <p>&copy; Все права защищены</p>
             <span>2025</span>
         </div>
     </footer>
 
-        <!-- Javascript File -->
-    <a href="#" class="scroll-up" id="scroll-up">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- Javascript Files -->
     <script src="main.js"></script>
-    <script src="peels.js"></script>
+    <script src="apparatus.js"></script>
 </body>
 </html>
