@@ -1,3 +1,6 @@
+const WHATSAPP_PHONE_NUMBER = "+79143814224";
+const WHATSAPP_ICON_URL = "https://cdn-icons-png.flaticon.com/512/124/124034.png";
+
 document.addEventListener('DOMContentLoaded', function() {
     loadApparatusData();
 });
@@ -79,6 +82,18 @@ function displayApparatus(apparatusData) {
                 price.textContent = item.price;
                 infoContainer.appendChild(price);
             }
+
+            // Add WhatsApp button
+            const whatsappLink = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodeURIComponent(`Хочу узнать подробнее про: ${item.name}`)}`;
+            const whatsappBtn = document.createElement('a');
+            whatsappBtn.href = whatsappLink;
+            whatsappBtn.className = 'whatsapp-btn';
+            whatsappBtn.target = '_blank';
+            whatsappBtn.innerHTML = `
+                <img src="${WHATSAPP_ICON_URL}" alt="WhatsApp">
+                Узнать больше
+            `;
+            infoContainer.appendChild(whatsappBtn);
 
             cardGroup.appendChild(infoContainer);
             card.appendChild(cardGroup);

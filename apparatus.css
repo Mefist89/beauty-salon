@@ -81,6 +81,30 @@
 .card-items .whatsapp-btn {
     align-self: center;
     margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card-items .whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+.card-items .whatsapp-btn img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 /* Media Queries */
