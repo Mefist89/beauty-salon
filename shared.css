@@ -156,38 +156,27 @@ body{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background-color: #fff;
-    border: 2px solid var(--first-color);
-    padding: 12px 24px;
-    color: var(--first-color);
-    border-radius: 50px;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #25D366;
+    color: white;
     text-decoration: none;
+    border-radius: 25px;
     font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    max-width: 220px;
-    margin-top: 1rem;
-    box-shadow: 0 4px 12px rgba(11, 175, 87, 0.1);
+    transition: background-color 0.3s ease;
+    border: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .whatsapp-btn:hover {
-    background-color: var(--first-color);
-    color: var(--white-color);
-    transform: scale(1.03);
-    box-shadow: 0 6px 16px rgba(11, 175, 87, 0.2);
+    background-color: #128C7E;
 }
 
 .whatsapp-btn img {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.whatsapp-btn:hover img {
-    transform: rotate(10deg);
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 /* FOOTER */
