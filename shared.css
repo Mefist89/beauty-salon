@@ -180,6 +180,10 @@ body{
 }
 
 /* FOOTER */
+.footer {
+    padding: 3rem 0 1rem;
+}
+
 .footer-list{
     width: 100%;
     max-width: 1200px;
@@ -187,45 +191,104 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    align-items: center;
-    padding: 7rem 0;
-    border-bottom: 1px solid var(--first-color);
+    align-items: stretch;
+    padding: 0 20px;
 }
+
 .footer-data{
     text-align: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
     margin-bottom: 1rem;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .footer-data-social{
     margin-top: 1rem;
 }
+
 .footer-data-social i{
     color: var(--first-color);
     font-size: var(--h2-font-size);
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
 }
+
+.footer-data-social i:hover {
+    transform: scale(1.2);
+}
+
 .footer-data h2{
     font-weight: bold;
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
     line-height: 1.5rem;
     color: var(--first-color);
     margin-bottom: 1rem;
     text-transform: capitalize;
 }
+
 .footer-data p{
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 1.4rem;
     text-align: center;
+    font-size: var(--small-font-size);
 }
+
 .footer .copy{
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0 0.5rem;
+    border-top: 1px solid rgba(117, 73, 43, 0.2);
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .footer .copy p{
     font-weight: bold;
     line-height: 1.5rem;
+    font-size: var(--small-font-size);
+    color: var(--first-color);
 }
+
 .footer .copy span{
     font-size: var(--small-font-size);
     line-height: 1rem;
+    color: var(--first-color);
+    opacity: 0.8;
+}
+
+/* Media Queries for Footer */
+@media (max-width: 920px) {
+    .footer-list{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 15px;
+    }
+    
+    .footer-data {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-list{
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .footer-data {
+        min-height: auto;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer .copy {
+        padding: 1rem 0;
+    }
 }
 
 /* --- MEDIA QUERIES --- */
